@@ -35,7 +35,7 @@ color: #676767;
 
 `;
 
-export const LabelSignup = styled.label`
+export const LabelSignin = styled.label`
 font-size: 16px;
 color: red;
 

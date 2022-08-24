@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import Input from '../../components/input';
-import Button from '../../components/button';
-import * as C from './style';
+import React, { useState } from "react";
+import Input from '../../components/Input';
+import Button from '../../components/Button';
+import * as C from './styles';
 import {Link, useNavigate} from "react-router-dom";
-import useAuth from '../../hooks/useuth';
+import useAuth from '../../hooks/useAuth';
 
 /*===================== confirmação do login===========*/
 
@@ -45,10 +45,10 @@ const Signin = () => {
                 value={email}
                 onChange={(e) => [setEmail(e.target.value), setError("")]}
                 />
-                <input
+                <Input
                 type="password"
                 placeholder="Digite sua senha"
-                value={email}
+                value={senha}
                 onChange={(e) => [setSenha(e.target.value), setError("")]}
                 />
                 <C.labelError>{error}</C.labelError>
@@ -56,7 +56,7 @@ const Signin = () => {
                 <C.LabelSignup>
                   Não tem uma conta?
                   <C.Strong>
-                      <link to="/signup">&nbsp; Registre-se</link>
+                      <Link to="/signup">&nbsp; Registre-se</Link>
                   </C.Strong>        
 
                </C.LabelSignup>
