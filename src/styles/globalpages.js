@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 
-const GlobalStyle = createGlobalStyle`
+const Globalpages = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -10,10 +10,10 @@ const GlobalStyle = createGlobalStyle`
   body {
     width: 100vw;
     height: 100vh;
-    background-color: #DCE0E5;
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif
-  
+    
   }
 `;
 
-export default GlobalStyle;
+export default Globalpages;
