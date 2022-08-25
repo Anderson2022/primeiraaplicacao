@@ -16,6 +16,7 @@ export const Button = styled.button`
   font-weight: 600;
   line-height: normal;
   margin: 0;
+  margin-top: 10px;
   min-height: 60px;
   min-width: 0;
   outline: none;
