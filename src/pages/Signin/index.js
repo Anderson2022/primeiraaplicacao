@@ -38,7 +38,7 @@ const Signin = () => {
   return (
     <C.Container>
         <C.Label>Login</C.Label>
-            <C.Content>
+            <C.Content >
                 <Input
                 type="email"
                 placeholder="Digite seu E-mail"
