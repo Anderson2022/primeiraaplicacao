@@ -34,7 +34,7 @@ const Sidebar = ({ active }) => {
         <SidebarItem Icon={FaUserAlt} Text="Usuarios" />
         <SidebarItem Icon={FaEnvelope} Text="E-Mail" />
         <SidebarItem Icon={FaRegCalendarAlt} Text="Calendario" />
-        <SidebarItem Icon={FaIdCardAlt} Text="Employees" />
+        <SidebarItem Icon={FaIdCardAlt} Text="Finanças" />
         <SidebarItem Icon={FaRegFileAlt} Text="Reports" />
         <SidebarItem Icon={FaRegSun} Text="Settings" />   
         <Button Text="Sair" onClick={() => [signout(), navigate("/")]}>
