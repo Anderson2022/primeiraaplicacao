@@ -19,7 +19,7 @@ align-items: center;
 justify-content: center;
 flex-direction: column;
 width: 100%;
-box-shadow; 0 1px 2px #0003;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 background-color:  #2F343C;
 max-width: 400px;
 height: 60vh;

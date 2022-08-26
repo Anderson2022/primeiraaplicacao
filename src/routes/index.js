@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
-import Home from "../pages/Home";
+import Home from "../pages/Home/App";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
 
@@ -23,7 +23,7 @@ const RoutesApp = () => {
           <Route path="*" element={<Signin />} />
         </Routes>
       </Fragment>
-      <Home></Home>
+     
     </BrowserRouter>
   );
 };

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Container2 = styled.div`
+export const Container = styled.div`
   height: 100px;
   display: flex;
-  background-color: #1A202C; 
-  box-shadow: 0 0 20px 3px;
+  background-color: #1C2127; 
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   
   > svg {
     position: fixed;
