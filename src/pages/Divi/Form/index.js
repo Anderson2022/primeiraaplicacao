@@ -1,3 +1,4 @@
+import { Button } from "bootstrap";
 import React, { useState } from "react";
 import Grid from "../Grid";
 import * as C from "./styles";
@@ -33,7 +34,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
 
   return (
     <>
-      <C.Container>
+      <C.Container >
         <C.InputContent>
           <C.Label>Descrição</C.Label>
           <C.Input value={desc} onChange={(e) => setDesc(e.target.value)} />
@@ -66,6 +67,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
         <C.Button onClick={handleSave}>ADICIONAR</C.Button>
       </C.Container>
       <Grid itens={transactionsList} setItens={setTransactionsList} />
+      <Button className="content">Close</Button> 
     </>
   );
 };

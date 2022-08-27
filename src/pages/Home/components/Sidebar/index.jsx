@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Container, Content } from './styles';
 import { 
   FaTimes, 
@@ -16,13 +16,14 @@ import useAuth from '../../../../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import SidebarItem from '../SidebarItem'
 import Button from '../Button';
+import Form from '../../../Divi/Form';
 
 const Sidebar = ({ active }) => {
 
   const closeSidebar = () => {
     active(false)
   }
-  
+  const {isFormVisible, setIsFormVisible} = useState(false);
   const { signout } = useAuth();
   const navigate = useNavigate();
   return (
@@ -34,7 +35,8 @@ const Sidebar = ({ active }) => {
         <SidebarItem Icon={FaUserAlt} Text="Usuarios" />
         <SidebarItem Icon={FaEnvelope} Text="E-Mail" />
         <SidebarItem Icon={FaRegCalendarAlt} Text="Calendario" />
-        <SidebarItem Icon={FaIdCardAlt} Text="Finanças" />
+        <SidebarItem Icon={FaIdCardAlt} Text="Finanças" onClick={() => setIsFormVisible(true) }>Finanças</SidebarItem>
+            {isFormVisible  ?  <Form /> : null }
         <SidebarItem Icon={FaRegFileAlt} Text="Reports" />
         <SidebarItem Icon={FaRegSun} Text="Settings" />   
         <Button Text="Sair" onClick={() => [signout(), navigate("/")]}>
