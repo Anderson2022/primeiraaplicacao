@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import Grid from "../Grid";
 import * as C from "./styles";
-import { modal as ModalComponent } from 'antd'
+import { Modal as ModalComponent } from 'antd'
 
 
-const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
+const Form = ({ handleAdd, transactionsList, setTransactionsList, active}) => {
   const [desc, setDesc] = useState("");
   const [amount, setAmount] = useState("");
   const [isExpense, setExpense] = useState(false);
 
-  const generateID = () => Math.round(Math.random() * 1000);
+    
 
-  const handleSave = () => {
+    const generateID = () => Math.round(Math.random() * 1000);
+
+    const handleSave = () => {
     if (!desc || !amount) {
       alert("Informe a descrição e o valor!");
+      
       return;
     } else if (amount < 1) {
       alert("O valor tem que ser positivo!");
@@ -31,11 +34,10 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
 
     setDesc("");
     setAmount("");
-  };
-
+  };      
   return (
     <>
-    <ModalComponent visible>
+    <ModalComponent Form={active}>
       <C.Container>
         <C.InputContent>
           <C.Label>Descrição</C.Label>
@@ -72,6 +74,6 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
       </ModalComponent>
     </>
   );
+  
 };
-
 export default Form;
