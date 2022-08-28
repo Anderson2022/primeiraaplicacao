@@ -4,7 +4,8 @@ import useAuth from "../hooks/useAuth";
 import Home from "../pages/Home/App";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
-import Form from "../pages/Divi/Form"
+
+
 
 const Private = ({ Item }) => {
   const { signed } = useAuth();
