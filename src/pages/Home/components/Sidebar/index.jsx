@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { Container, Content } from './styles'
+import Formulario from '../Divi'
 import { 
   FaTimes, 
   FaHome, 
@@ -26,7 +27,8 @@ const Sidebar = ({ active }) => {
     active(false)
   }
 
-
+    const [formulario,setFormulario] = useState(false)
+    const showFormulario = () => setFormulario(!Formulario)
 
   return (
     <Container sidebar={active}>
@@ -37,7 +39,7 @@ const Sidebar = ({ active }) => {
         <SidebarItem Icon={FaUserAlt} Text="Usuario" />
         <SidebarItem Icon={FaEnvelope} Text="E-Mail" />
         <SidebarItem Icon={FaRegCalendarAlt} Text="Calendario" />
-        <SidebarItem Icon={FaIdCardAlt} Text="Finanças" />
+        <SidebarItem Icon={FaIdCardAlt} Text="Finanças" onClick={showFormulario} />
         <SidebarItem Icon={FaRegFileAlt} Text="Relatorios" />
         <SidebarItem Icon={FaRegSun} Text="Configurações" />
           
