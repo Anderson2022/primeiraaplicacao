@@ -4,8 +4,8 @@ import useAuth from "../hooks/useAuth";
 import Home from "../pages/Home/App";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
-
-
+import Products from "../pages/Home/pages/Products";
+import Inicio from "../pages/Home/pages/Inicio"
 
 const Private = ({ Item }) => {
   const { signed } = useAuth();
@@ -22,10 +22,15 @@ const RoutesApp = () => {
           <Route path="/" element={<Signin />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route path="*" element={<Signin />} />
+          <Route exact path="/products" element={<Products />} />
+          <Route path="*" element={<Products />} />
+          <Route exact path="/inicio" element={<Inicio />} />
+          <Route path="*" element={<Inicio />} />
         </Routes>
       </Fragment>
      
     </BrowserRouter>
+    
   );
 };
 

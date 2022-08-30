@@ -1,7 +1,7 @@
 import React from 'react'
-import '../components/Sider.css';
+import '../components/Navbar.css';
 
-export default function Home()  {
+export default function inicio()  {
     return (
 
             <h1>Seu Perfil</h1>
