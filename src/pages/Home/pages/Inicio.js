@@ -1,10 +1,11 @@
 import React from 'react'
+import Navbar from '../components/Navbar';
 import '../components/Navbar.css';
 
 export default function inicio()  {
     return (
-
-            <h1>Seu Perfil</h1>
-
+            <Navbar>
+            <h1 className='ini'>Seu Perfil</h1>
+            </Navbar>
     )
 }
