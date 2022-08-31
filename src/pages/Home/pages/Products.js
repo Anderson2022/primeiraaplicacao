@@ -1,38 +1,34 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import { render } from 'react-dom';
-import Navbar from '../components/Navbar';
 
 
-export default function Products()  {
+import Modal from "react-modal";
+import Navbar from "../components/Navbar";
+import "./pages.css";
 
-const [show, setShow] = useState(false);
+// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement("#root");
 
-  const handleClose = () => setShow(false);
+function Products() {
+ 
+  return (
+    
+    
+    <div className="Container">
+    <Navbar/>
+    
+        <h2>Hello - I am a modal!</h2>
+        <hr />
+        <p>
+          We maintain that accessibility is a key component of any modern web
+          application. As such, we have created this modal in such a way that it
+          fulfills the accessibility requirements of the modern web. We seek to
+          keep the focus on accessibility while providing a functional, capable
+          modal component for general use.
+        </p>
+     
+       
+    </div>
   
-
-
-    return (
-         <>
-     <Navbar>
-     <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-      </Navbar>
-    </>
   );
 }
 
-render (<Products/>)
+export default Products;
