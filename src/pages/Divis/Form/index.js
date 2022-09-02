@@ -38,7 +38,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList, active}) => {
   };      
   return (
     <>
-    <ModalComponent Form={active}>
+     
       <C.Container>
         <C.InputContent>
           <C.Label>Descrição</C.Label>
@@ -72,7 +72,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList, active}) => {
         <C.Button onClick={handleSave}>ADICIONAR</C.Button>
       </C.Container>
       <Grid itens={transactionsList} setItens={setTransactionsList} />
-      </ModalComponent>
+      
     </>
   );
   

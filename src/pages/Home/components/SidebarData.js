@@ -20,8 +20,8 @@ export const SidebarData = [
     cName: 'nav-text'
     },
     {
-    title:'Financeiro',
-    path:"/Form",
+    title:'Formula',
+    path:"/index",
     icon:<FaIcons.FaCartPlus />,
     cName:'nav-text'
     }

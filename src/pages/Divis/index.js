@@ -1,16 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-import Form from '../Divis/Form'
 import Navbar from '../Home/components/Navbar';
+import Modal from "react-modal";
+import App from "../Divis"
 
-const Formula = () =>{
-ReactDOM.render(
-  <React.StrictMode>
+
+
+
+Modal.setAppElement("#root");
+
+function Formula() {
+ 
+  return (
+    <>
     <Navbar/>
-    <Form />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    <App/>   
+     
+ </>
+  );
 }
+
 export default Formula;
