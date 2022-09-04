@@ -1,22 +1,6 @@
-import React from 'react';
-import Navbar from '../Home/components/Navbar';
-import Modal from "react-modal";
-import App from "../Divis"
+import { createRoot } from "react-dom/client";
+import App from "./App";
 
+const root = createRoot(document.querySelector("#root"))
 
-
-
-Modal.setAppElement("#root");
-
-function Formula() {
- 
-  return (
-    <>
-    <Navbar/>
-    <App/>   
-     
- </>
-  );
-}
-
-export default Formula;
+root.render(<App />)

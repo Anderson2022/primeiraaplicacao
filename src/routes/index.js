@@ -6,8 +6,7 @@ import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
 import Products from "../pages/Home/pages/Products";
 import Inicio from "../pages/Home/pages/Inicio"
-import Formula from "../pages/Divis/index";
-
+import App from "../pages/Divis/App"
 const Private = ({ Item }) => {
   const { signed } = useAuth();
 
@@ -27,8 +26,8 @@ const RoutesApp = () => {
           <Route path="*" element={<Products />} />
           <Route exact path="/inicio" element={<Inicio />} />
           <Route path="*" element={<Inicio />} />
-          <Route exact path="/index" element={<Formula/>} />
-          <Route path="*" element={<Formula />} />
+          <Route exact path="/App" element={<App/>} />
+          <Route path="*" element={<App />} />
         </Routes>
       </Fragment>
      

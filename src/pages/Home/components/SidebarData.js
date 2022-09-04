@@ -21,7 +21,7 @@ export const SidebarData = [
     },
     {
     title:'Formula',
-    path:"/index",
+    path:"/App",
     icon:<FaIcons.FaCartPlus />,
     cName:'nav-text'
     }

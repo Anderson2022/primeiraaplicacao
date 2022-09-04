@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import GlobalStyle from "./styles/global";
 import Header from "./Header"
 import Resume from "./Resume";
 import Form from "./Form";
-
+import Modal from 'react-bootstrap/Modal';
+import Navbar from "../Home/components/Navbar";
 
 
 const App = () => {
+  const [show, setShow] = useState(false)
   const data = localStorage.getItem("transactions");
   const [transactionsList, setTransactionsList] = useState(
     data ? JSON.parse(data) : []
@@ -44,7 +45,19 @@ const App = () => {
 
   return (
     <>
-      
+   <Navbar/>
+      <Modal
+        show={show}
+        onHide={() => setShow(false)}
+        dialogClassName="modal-90w"
+        aria-labelledby="example-custom-modal-styling-title"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-custom-modal-styling-title">
+            Custom Modal Styling
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
       <Header />
       <Resume income={income} expense={expense} total={total} />
       <Form
@@ -52,7 +65,8 @@ const App = () => {
         transactionsList={transactionsList}
         setTransactionsList={setTransactionsList}
       />
-      <GlobalStyle />
+      </Modal.Body>
+      </Modal>
     </>
   );
 };
