@@ -1,38 +1,88 @@
 .modal{
-    width: 21%;
-    height: 30vh;
-    position: absolute;
-    top: 19rem;
-    left: 34rem;
-    z-index: 10;
-    border: solid 1px red;
-    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 5;
+    border: solid 1px rgb(24, 22, 22);
+    background-color: rgba(0, 0, 0, 0.267);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     
 
-.container{
-background-color: aliceblue;
-color: #000;
-width: 100%;
-height: 100%;
+    .container{
+    background-color: aliceblue;
+    color: #000;
+    width: min(300px, 90%);
+    height: min(221px, 90%);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+    position: relative;
 
-
-.close{
-    background-color: transparent;
-    border: none;
+        .close{
+            border: none;
+            outline: none;
+            width: 35%;
+            cursor: pointer;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            left: 10rem;
+            top: 10rem;
+            height: 2rem;
+            color: white;
+            background-color: #000;
+            border-radius: 1rem;
+            
+        }
+        .yes{
+            border: none;
     outline: none;
-    width: 69px;
-    height: 54px;
-    right: calc(-100% + 1973px);
-    top: 499px;
+    width: 50%;
     cursor: pointer;
     display: flex;
-    position: absolute;
+    position: relative;
     align-items: center;
-}
+    left: 0rem;
+    top: 7.2rem;
+    height: 2rem;
+    color: white;
+    background-color: #000;
+    border-radius: 1rem;
+        }
+        
+    }
 
 }
 
-}
+.delete{
+    width: 4rem;
+    height: 2rem;
+    background: black;
+    color: white;
+    border-radius: 0.5rem
+ }
+        .alter{
+            width: 4rem;
+            height: 2rem;
+            background: rgb(243, 247, 242);
+            color: rgb(15, 15, 15);
+            border-radius: 0.5rem
+                }
+
+               
+.form{
+    width: 15vw;
+    margin: 1rem;
+    position: absolute;
+    display: flex;
+}  
+.select{
+    width: 1rem;
+}   
+

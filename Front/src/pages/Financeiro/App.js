@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import GlobalStyle from "../../styles/global";
-import Header from "../Estoque/components/Header";
-import Resume from "../Estoque/components/Resume";
-import Form from "../Estoque/components/Form";
-import Navbar from "../Home/components/Navbar";
-import * as C from "./styles/styles";
-import Modal from "./components/GridItem/Modal/Modal";
+import GlobalStyle from "./styles/global";
+import Header from "./components/Header";
+import Resume from "./components/Resume";
+import Form from "./components/Form";
+import Modal from "../Estoque/components/GridItem/Modal/Modal";
 
-const Products = () => {
+const App = () => {
   const data = localStorage.getItem("transactions");
   const [transactionsList, setTransactionsList] = useState(
     data ? JSON.parse(data) : []
@@ -25,14 +23,14 @@ const Products = () => {
       .filter((item) => !item.expense)
       .map((transaction) => Number(transaction.amount));
 
-    const expense = amountExpense.reduce((acc, cur) => acc + cur, 0).toFixed(0);
-    const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(0);
+    const expense = amountExpense.reduce((acc, cur) => acc + cur, 0).toFixed(2);
+    const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2);
 
-    const total = Math.abs(income - expense).toFixed(0);
+    const total = Math.abs(income - expense).toFixed(2);
 
-    setIncome(` ${income}`);
-    setExpense(` ${expense}`);
-    setTotal(`${Number(income) < Number(expense) ? "-" : ""} ${total}`);
+    setIncome(`R$ ${income}`);
+    setExpense(`R$ ${expense}`);
+    setTotal(`${Number(income) < Number(expense) ? "-" : ""}R$ ${total}`);
   }, [transactionsList]);
 
   const handleAdd = (transaction) => {
@@ -45,22 +43,22 @@ const Products = () => {
 
   return (
     <>
-    <Navbar />
-    <C.Container>
+        <Modal>
+        <h2>Deletar item?</h2>
+        <button onClick={() => onDelete(item.id)}>Sim</button>
+        <button className="close" onClick={onClose}>Fechar</button>
+       </Modal>
       <Header />
       <Resume income={income} expense={expense} total={total} />
       <Form
         handleAdd={handleAdd}
         transactionsList={transactionsList}
         setTransactionsList={setTransactionsList}
-      />  
-    </C.Container>
-  
-      <GlobalStyle />
+      />
+       
+      <GlobalStyle /> 
     </>
   );
 };
 
-
-
-export default Products;
+export default App;

@@ -13,7 +13,23 @@ export const Td = styled.td`
   }
 `;
 
-export const button = styled.button`
+
+
+export const h2 = styled.h2`
+
+`;
+
+export const Label = styled.label``;
+
+export const Input = styled.input`
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+`;
+
+export const Button = styled.button`
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
@@ -22,5 +38,3 @@ export const button = styled.button`
   background-color: #1C2127;
   
 `;
-
-
