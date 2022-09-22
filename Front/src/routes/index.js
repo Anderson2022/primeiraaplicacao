@@ -1,12 +1,14 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Home from "../pages/Home/App";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
-import Products from "../pages/Home/pages/Products";
+import Products from "../pages/Estoque/Products";
 import Inicio from "../pages/Home/pages/Inicio"
-import App from "../pages/Divis/App"
+import App from "../pages/Divis/App";
+
+
 const Private = ({ Item }) => {
   const { signed } = useAuth();
 

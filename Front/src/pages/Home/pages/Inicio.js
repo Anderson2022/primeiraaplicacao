@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar';
 import '../components/Navbar.css';
 
-export default function inicio()  {
+export default function Inicio()  {
     return (
             <Navbar>
             <h1 className='ini'>Seu Perfil</h1>
