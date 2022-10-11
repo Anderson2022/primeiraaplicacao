@@ -33,15 +33,15 @@
             position: absolute;
             align-items: center;
             left: 10rem;
-            top: 10rem;
+            top: 11rem;
             height: 2rem;
             color: white;
             background-color: #000;
             border-radius: 1rem;
             
         }
-        .yes{
-            border: none;
+.yes{
+    border: none;
     outline: none;
     width: 50%;
     cursor: pointer;
@@ -49,7 +49,7 @@
     position: relative;
     align-items: center;
     left: 0rem;
-    top: 7.2rem;
+    top: 8.2rem;
     height: 2rem;
     color: white;
     background-color: #000;
@@ -67,22 +67,66 @@
     color: white;
     border-radius: 0.5rem
  }
-        .alter{
-            width: 4rem;
-            height: 2rem;
-            background: rgb(243, 247, 242);
-            color: rgb(15, 15, 15);
-            border-radius: 0.5rem
-                }
+.alter{
+width: 4rem;
+height: 2rem;
+background: rgb(243, 247, 242);
+color: rgb(15, 15, 15);
+border-radius: 0.5rem
 
+
+}
+
+/*=======================Moadl de alteração de cadastro=============*/
                
 .form{
-    width: 15vw;
+    width: 13vw;
     margin: 1rem;
     position: absolute;
     display: flex;
 }  
 .select{
-    width: 1rem;
-}   
+    position: absolute;
+    width: 13rem;
+    display: flex;
+    margin: 3px;
+    left: 44px;
+    top: 85px;
 
+}   
+.Add{
+    border: none;
+    outline: none;
+    width: 35%;
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    align-items: center;
+      left: 3rem;
+    top: 11rem;
+    height: 2rem;
+    color: white;
+    background-color: #000;
+    border-radius: 1rem;
+}
+
+
+
+.mb-3{
+    align-items: center;
+    top: 7rem;
+    display: flex;
+    position: absolute;
+}
+.control{
+    width: 5rem;
+    margin-left: 11px;
+    margin-right: -13px;
+}
+
+.mb-4{
+    align-items: center;
+    top: 9rem;
+    display: flex;
+    position: absolute;
+}

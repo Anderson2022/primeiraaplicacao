@@ -8,7 +8,7 @@ const Modal = ({children, onClose = ()=>{} }) => {
         <div className="container">
              <div className="content">{children}</div>
              <button className="close" onClick={onClose}>Fechar</button>
-             <button onClick={handleSave}>ADICIONAR</button>
+           
             
            <GlobalStyle/>
         </div>
