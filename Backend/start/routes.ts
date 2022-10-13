@@ -1,7 +1,15 @@
-
-
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/App', async () => {
 
-})
+Route.group(
+  () => {
+    Route.get("/", () => {
+      return { hello : "world"}
+    });
+
+    Route.post("/signup", ({ request }) => {
+    request.body()
+  })
+
+}).prefix("/api");
+
