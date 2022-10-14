@@ -1,15 +1,7 @@
-import Route from '@ioc:Adonis/Core/Route'
 
 
-Route.group(
-  () => {
-    Route.get("/", () => {
-      return { hello : "world"}
-    });
+import Route from '@ioc:Adonis/Core/Route';
 
-    Route.post("/signup", ({ request }) => {
-    request.body()
-  })
+Route.post("/users", "UsersController.create");
 
-}).prefix("/api");
 

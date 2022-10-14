@@ -1,11 +1,15 @@
-// import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-
-import { HttpContextContract } from "@adonisjs/core/build/standalone";
+import { HttpContextContract } from "@ioc:Adonis/Core/HttpContext";
+import User from "App/Models/User"
 
 export default class UsersController {
+public async create({ request }: HttpContextContract){
+  const { username, name, password} = request.only(["name", "username", "password"])
 
+  const user = await User.create({
+      username,
+      name,
+      password,
+  })
 
-public async index({ request }: HttpContextContract){
-  const data = request.only(["name", "username"])
-  console.log(data)
+  return user;
 }}
